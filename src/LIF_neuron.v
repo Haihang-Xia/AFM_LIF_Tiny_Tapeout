@@ -376,7 +376,7 @@ always@(posedge clk)begin
     
     pip9_ei <= pip8_ei;
     pip9_sve <= pip8_sve;
-        if (pip9_sve) pip9_vet <= {pip8_sve, (~scl_vet + 1)};
+        if (pip9_sve) pip9_vet <= {pip8_sve, (~scl_vet + 1'b1)};
         else pip9_vet <= {pip8_sve,scl_vet};    
     	  //if ((vout0[15]==0)&(vout0 >= 16'b0011110000000000)) voutbuffer <= E_REST;
         //else voutbuffer <= vout0;

@@ -5,7 +5,25 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = LIF_neuron.v
+PROJECT_SOURCES = \
+	LIF_neuron.v \
+	adder_10bit.v \
+	adder_16bit.v \
+	adder_4bit.v \
+	adder_8bit.v \
+	adder_9bit.v \
+	app_mul_8bit.v \
+	app_mul_9bit.v \
+	folded_mul_16bit.v \
+	full_adder.v \
+	half_adder.v \
+	preprocess.v \
+	preprocess_8bit.v \
+	preprocess_9bit.v \
+	signed_adder_16bit.v \
+	signed_adder_17bit.v \
+	signed_substrator_16bit.v \
+	substrator_18bit.v
 
 ifneq ($(GATES),yes)
 
