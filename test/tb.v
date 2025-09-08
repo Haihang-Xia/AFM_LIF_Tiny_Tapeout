@@ -49,7 +49,7 @@ initial
     begin
 
 
-    $dumpfile("dump.vcd");
+    $dumpfile("tb.vcd");
     $dumpvars(0, tb); 
 
    
