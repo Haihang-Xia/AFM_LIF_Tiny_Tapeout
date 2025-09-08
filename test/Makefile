@@ -6,7 +6,7 @@ SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = \
-	LIF_neuron.v \
+	tt_um_LIF_neuron.v \
 	adder_10bit.v \
 	adder_16bit.v \
 	adder_4bit.v \
