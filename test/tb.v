@@ -30,7 +30,7 @@ reg [7:0] ui_in,uio_in;
   wire VGND = 1'b0;
 `endif
 
-LIF_neuron UUT(
+tt_um_LIF_neuron UUT(
 `ifdef GL_TEST
       .VPWR(VPWR),
       .VGND(VGND),
