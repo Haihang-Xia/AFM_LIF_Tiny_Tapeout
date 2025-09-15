@@ -155,7 +155,7 @@ async def test_project(dut):
         dut.ui_in.value = cycle
         
         # Read outputs
-        uo_out_value = int(dut.uo_out.value)
+        #uo_out_value = int(dut.uo_out.value)
         dut._log.info(f"\nCycle {cycle}:input:{cycle}")
         #dut._log.info(f"\nCycle {cycle}:output:{uo_out_value}")
  
