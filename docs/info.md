@@ -29,7 +29,7 @@ The execution of this architecture consists of three phases:
 
 ## How to test
 
-#### 1. Reset (High to reset, rst = 1)
+#### 1. Reset (Low to reset, rst_n = 0)
 
 - All the parameter and membrane potential reset to 0.
 

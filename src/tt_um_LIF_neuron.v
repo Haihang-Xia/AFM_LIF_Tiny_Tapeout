@@ -21,7 +21,7 @@
 
 module tt_um_LIF_neuron(
 input clk,
-input rst,//HIGH to Reset
+input rst_n,//HIGH to Reset
 //input [15:0] v, //(1,6,9)
 //input [15:0] i,
 //output [15:0] vout,
@@ -99,7 +99,7 @@ reg i_c;
 assign uio_oe = ioctrl;
 
 always@(posedge clk)begin
-	if (rst) begin
+	if (rst_n == 0) begin
 	state <= 0;
 	E_REST <= 0;
 	E_TAU <= 0;
@@ -242,7 +242,7 @@ signed_adder_16bit adder0(.s_a({2'b0,i,6'b0}), .s_b(E_REST), .s_c(e_i)); //i (5,
 signed_substrator_16bit substrator0(.s_a(wi_vin), .s_b(E_REST), .s_c(v_e));
 ///////////////pipline stage 1////////////////////
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip2_ei <= 0;
     sign_ve <= 0;
@@ -267,7 +267,7 @@ assign scl_vet = vet[23:8];//scal the vet to 33-16 {14,18} -> {7,9}
 
 
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip3_ei <= 0;
     pip3_sve <= 0;
@@ -284,7 +284,7 @@ end
 ///////////////pipline stage 3////////////////////2
 
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip4_ei <= 0;
     pip4_sve <= 0;
@@ -302,7 +302,7 @@ end
 
 
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip5_ei <= 0;
     pip5_sve <= 0;
@@ -319,7 +319,7 @@ end
 
 
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip6_ei <= 0;
     pip6_sve <= 0;
@@ -336,7 +336,7 @@ end
 
 
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip7_ei <= 0;
     pip7_sve <= 0;
@@ -354,7 +354,7 @@ end
 
 
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip8_ei <= 0;
     pip8_sve <= 0;
@@ -369,7 +369,7 @@ end
 
 ///////////////pipline stage 8////////////////////
 always@(posedge clk)begin
-    if(rst)begin
+    if(rst_n == 0)begin
     
     pip9_ei <= 0;
     pip9_vet <= 0;

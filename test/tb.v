@@ -36,7 +36,7 @@ tt_um_LIF_neuron UUT(
       .VGND(VGND),
 `endif
 	.clk(clk), 
-	.rst(rst), 
+	.rst_n(rst), 
 	.ena(ena),
 	.ui_in(ui_in), 
 	.uo_out(uo_out), 
