@@ -157,6 +157,6 @@ async def test_project(dut):
         # Read outputs
         uo_out_value = int(dut.uo_out.value)
         dut._log.info(f"\nCycle {cycle}:input:{cycle}")
-        dut._log.info(f"\nCycle {cycle}:output:{uo_out_value}")
+        #dut._log.info(f"\nCycle {cycle}:output:{uo_out_value}")
  
     dut._log.info("All behavioral checks passed!")
