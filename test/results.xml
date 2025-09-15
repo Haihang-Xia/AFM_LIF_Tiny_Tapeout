@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1757940156" />
-    <testcase name="test_project" classname="test" file="/home/haihang/Documents/code/AFM_LIF_Tiny_Tapeout/test/test.py" lineno="9" time="0.0065839290618896484" sim_time_ns="540000.001" ratio_time="82017894.77437277" />
+    <property name="random_seed" value="1757940936" />
+    <testcase name="test_project" classname="test" file="/home/haihang/Documents/code/AFM_LIF_Tiny_Tapeout/test/test.py" lineno="9" time="0.006522655487060547" sim_time_ns="540000.001" ratio_time="82788367.72404066" />
   </testsuite>
 </testsuites>
