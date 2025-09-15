@@ -27,6 +27,7 @@ input rst,//HIGH to Reset
 //output [15:0] vout,
 //output spike,
 //output done
+input wire ena,
 input  wire [7:0] ui_in,    // Dedicated inputs
 output wire [7:0] uo_out,   // Dedicated outputs
 input  wire [7:0] uio_in,   // IOs: Input path
@@ -69,6 +70,9 @@ reg pip3_sve, pip4_sve,pip5_sve,pip6_sve,pip7_sve,pip8_sve,pip9_sve;
 reg [15:0] buffer0,buffer1,buffer2,buffer3,buffer4,buffer5,buffer6,buffer7;
 reg [15:0] vin;
 wire [15:0] wi_vin;
+
+// List all unused inputs to prevent warnings
+wire _unused = ena;
 
 
 ///////////////Prarmeters & Inial Data Input/////////////////////

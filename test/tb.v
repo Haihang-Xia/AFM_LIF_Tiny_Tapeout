@@ -23,7 +23,7 @@
 module tb();
 reg clk;
 reg rst;
-wire [7:0] uo_out,uio_out,uio_oe;
+wire [7:0] uo_out,uio_out,uio_oe,ena;
 reg [7:0] ui_in,uio_in;
 `ifdef GL_TEST
   wire VPWR = 1'b1;
@@ -37,6 +37,7 @@ tt_um_LIF_neuron UUT(
 `endif
 	.clk(clk), 
 	.rst(rst), 
+	.ena(ena),
 	.ui_in(ui_in), 
 	.uo_out(uo_out), 
 	.uio_in(uio_in), 
